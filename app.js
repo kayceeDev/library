@@ -12,9 +12,8 @@ function BookStore() {
   if (!localStorage.getItem("books") && this.bookList.length > 0) {
     localStorage.setItem("books", JSON.stringify(this.bookList));
   }
-  if(localStorage.length >0){
-
-      this.bookList = JSON.parse(localStorage.books);
+  if (localStorage.length > 0) {
+    this.bookList = JSON.parse(localStorage.books);
   }
 }
 
@@ -112,17 +111,15 @@ const displayBooks = (arr) => {
     }</p><p class='author'>Author: ${item.author}</p><button class=${
       item.checked ? "read-book" : "not-read"
     }>${
-      item.checked ? "Borrowed" : "Borrow Book"
+      item.checked ? "Already Borrowed: click to return" : "Borrow Book"
     }</button><button class='remove-book'>Remove</button>`;
     books.appendChild(book);
   });
 };
 
-if(localStorage.length >0){
-
-    displayBooks(localStorage.books);
+if (localStorage.length > 0) {
+  displayBooks(localStorage.books);
 }
-
 
 addBookBtn.addEventListener("click", () => {
   showModal();
@@ -161,7 +158,7 @@ books.addEventListener("click", (e) => {
   const targetEle = e.target;
   let selector = "read-book";
   if (targetEle.className === selector) {
-    let bookToReturn= targetEle.parentNode;
+    let bookToReturn = targetEle.parentNode;
     library.returnBook(+bookToReturn.dataset.index);
     // targetEle.textContent = "Borrowed";
   }

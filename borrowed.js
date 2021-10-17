@@ -1,4 +1,5 @@
 
+
 let books = document.querySelector("#book-list");
 
 
@@ -16,7 +17,7 @@ const displayBooks = (arr) => {
             book.innerHTML = `<p class='title'>Title: ${
               item.title
             }</p><p class='author'>Author: ${item.author}</p><button class="read-book"
-            }>Borrowed</button><button class='remove-book'>Return Book</button>`;
+            }>Borrowed</button><button class='remove-book'> Go Home to Return Book</button>`;
             books.appendChild(book);
         }
     });
@@ -28,3 +29,13 @@ const displayBooks = (arr) => {
 
       displayBooks(localStorage.books)
   }
+
+//   books.addEventListener("click", (e) => {
+//     const targetEle = e.target;
+//     let selector = "remove-book";
+//     if (targetEle.className === selector) {
+//       let bookToReturn= targetEle.parentNode;
+//       library.returnBook(+bookToReturn.dataset.index);
+//       // targetEle.textContent = "Borrowed";
+//     }
+//   });
