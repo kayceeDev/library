@@ -35,7 +35,7 @@ const hideModal = () => {
 BookStore.prototype.addBook = function () {
   const newAuthor = author.value;
   const newTitle = title.value;
-  if (newAuthor && newTitle && !checkBookList(this.bookList, title)) {
+  if (newAuthor.trim() && newTitle.trim() && !checkBookList(this.bookList, title)) {
     let newBook;
     if (borrowCheckbox.checked) {
       newBook = {
