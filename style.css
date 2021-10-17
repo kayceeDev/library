@@ -24,6 +24,7 @@ header {
   font-family: "Roboto", sans-serif;
   display: flex;
   padding: 3rem;
+  justify-content: space-between;
   align-items: center;
   font-size: 2rem;
   border: 1px solid #000;
@@ -72,10 +73,11 @@ header {
     color: #ddd;
 }
 
-.book-list {
+#book-list {
     align-self: flex-start;
   display: flex;
   gap: 1rem;
+  /* flex-direction: row; */
   /* min-width: 100vw; */
   flex-wrap: wrap;
   /* width: 80vw; */
@@ -160,3 +162,15 @@ font-size: 1rem;
 
 
 
+.title,.author{
+    font-size: 1.5rem;
+}
+
+
+a{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000;
+}
