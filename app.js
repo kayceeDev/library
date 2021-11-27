@@ -63,7 +63,6 @@ BookStore.prototype.addBook = function () {
 
 BookStore.prototype.removeBook = function (id) {
   const updatedBooks = this.bookList.filter((item) => item.id !== id);
-  console.log(updatedBooks);
   this.bookList = updatedBooks;
   localStorage.setItem("books", JSON.stringify(updatedBooks));
   displayBooks(localStorage.books);
@@ -148,7 +147,6 @@ books.addEventListener("click", (e) => {
   const targetEle = e.target;
   let selector = "not-read";
   if (targetEle.className === selector) {
-    console.log("jjjj");
     let bookToBorrow = targetEle.parentNode;
     library.borrowBook(+bookToBorrow.dataset.index);
     // targetEle.textContent = "Borrowed";
