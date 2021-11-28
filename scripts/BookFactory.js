@@ -1,6 +1,4 @@
-const localStorageWrapper = require("./localstorageWrapper");
-
-const BookFactory = (localStorageWrapper) => {
+export const BookFactory = (localStorageWrapper) => {
   let bookList = [];
   // console.log("BooklistInitial:",bookList)
   if (localStorageWrapper.getItem("books"))
@@ -79,9 +77,9 @@ const BookFactory = (localStorageWrapper) => {
   };
 };
 
-//module.exports = BookFactory;
-const exportFunctions = {
-  BookFactory,
-  localStorageWrapper,
-};
-module.exports = exportFunctions;
+// //module.exports = BookFactory;
+// const exportFunctions = {
+//   BookFactory,
+//   localStorageWrapper,
+// };
+// module.exports = exportFunctions;
