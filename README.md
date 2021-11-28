@@ -2,8 +2,8 @@
 
 ### Description:
 
-This application was created using vanilla JavaScript, HTML, CSS
-The main focus was to learn Test driven development using Jest.
+This application was created using vanilla JavaScript, HTML, CSS.
+The main focus was to learn unit testing using Jest.
 
 This is a mini application for personal use to help you keep tabs of books you borrow out to friends.
 It uses local storage to store data.
@@ -20,5 +20,4 @@ It uses local storage to store data.
 2. `cd` into the project folder using your terminal or open your terminal in the project folder
 3. Inside your terminal, run `npm install`
 4. lastly, run `npm run watch` or `npm run test`
-
-#### Feel free to contibute to this project by creating a pull request.
+   .
