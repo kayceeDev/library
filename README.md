@@ -5,7 +5,8 @@
 This application was created using vanilla JavaScript, HTML, CSS
 The main focus was to learn Test driven development using Jest.
 
-This is a mini application for personal use to help you keep tabs of books you borrow out to friends
+This is a mini application for personal use to help you keep tabs of books you borrow out to friends.
+It uses local storage to store data.
 
 ### Functionalities
 
@@ -13,7 +14,7 @@ This is a mini application for personal use to help you keep tabs of books you b
 - User can borrow a book and keep tabs of the books borrowed by updating the borrowed book status.
 - User updates borrowed book status to unborrowed when book is returned.
 
-### How to test function
+### How to test functions with jest
 
 1. Clone the repo using `git clone <Repo URL>`
 2. `cd` into the project folder using your terminal or open your terminal in the project folder
