@@ -17,6 +17,5 @@ const fakeLocalStorage = (function() {
     };
   })();
 
-  console.log(fakeLocalStorage)
 
   module.exports = fakeLocalStorage

@@ -35,7 +35,11 @@ const hideModal = () => {
 BookStore.prototype.addBook = function () {
   const newAuthor = author.value;
   const newTitle = title.value;
-  if (newAuthor.trim() && newTitle.trim() && !checkBookList(this.bookList, title)) {
+  if (
+    newAuthor.trim() &&
+    newTitle.trim() &&
+    !checkBookList(this.bookList, title)
+  ) {
     let newBook;
     if (borrowCheckbox.checked) {
       newBook = {
@@ -78,7 +82,7 @@ BookStore.prototype.borrowBook = function (id) {
   });
   this.bookList = updatedBooks;
   localStorage.setItem("books", JSON.stringify(updatedBooks));
-  displayBooks(localStorage.books);
+  // displayBooks(localStorage.books);
 };
 BookStore.prototype.returnBook = function (id) {
   const updatedBooks = this.bookList.map((item) => {
@@ -91,7 +95,7 @@ BookStore.prototype.returnBook = function (id) {
 
   this.bookList = updatedBooks;
   localStorage.setItem("books", JSON.stringify(updatedBooks));
-  displayBooks(localStorage.books);
+  // displayBooks(localStorage.books);
 };
 
 let library = new BookStore();
