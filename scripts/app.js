@@ -20,11 +20,14 @@ const hideModal = () => {
   backDrop.classList.add("display-none");
 };
 
+
+
 const displayBooks = (arr) => {
   arr = JSON.parse(arr);
   // clear everything inside <ul> with class=todo-items
   books.innerHTML = "";
   // run through each item inside todos
+  
   arr.map((item) => {
     const book = document.createElement("div");
     book.className = "book";
